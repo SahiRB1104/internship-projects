@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("1.png");
+  }
+
+  .container {
+    max-width: 800px;
+    width: 90%;
+    padding: 40px;
+    background-color: rgba(166, 204, 232, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4A5D23;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .search-wrapper {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* Dropdown Styles */
+  .dropdown {
+    position: relative;
+    min-width: 200px;
+  }
+
+  .dropdown-select {
+    width: 100%;
+    padding: 12px 15px;
+    background: white;
+    border: 1px solid #607821;
+    border-radius: 6px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4A5D23;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%234A5D23' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+  }
+
+  .dropdown-select:focus {
+    outline: none;
+    border-color: #4A5D23;
+    box-shadow: 0 0 0 2px rgba(74, 93, 35, 0.1);
+  }
+
+  /* Search Input Styles */
+  .search-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #9AB359;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+  }
+
+  .search-input:focus {
+    border-color: #4A5D23;
+    box-shadow: 0 0 0 2px rgba(74, 93, 35, 0.1);
+  }
+
+  /* Search Button Styles */
+  .search-btn {
+    padding: 12px 24px;
+    background: #445a17;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.6s;
+  }
+
+  .search-btn:hover {
+    background: #5B7029;
+  }
+
+  @media (max-width: 600px) {
+    .search-wrapper {
+      flex-direction: column;
+    }
+    
+    .dropdown {
+      width: 100%;
+    }
+
+    .container {
+      padding: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Search Interface</h1>
+    <div class="search-wrapper">
+      <div class="dropdown">
+        <select class="dropdown-select">
+          <option value="everything">Everything</option>
+          <option value="software-development">Software Development</option>
+          <option value="web-development">Web Development</option>
+          <option value="data-analyst">Data Analyst</option>
+          <option value="it-consultant">IT Consultant</option>
+          <option value="network-administrator">Network Administrator</option>
+        </select>
+      </div>
+      <input type="text" class="search-input" placeholder="Search...">
+      <button class="search-btn">Search</button>
+    </div>
+  </div>
+</body>
+</html>
