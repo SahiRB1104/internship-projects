@@ -1,2 +1,5 @@
 # internship-projects
+WEB DEVELOPMENT
+INTERNSHIP PROGRAM WEEK 1 PROJECT
+
  
